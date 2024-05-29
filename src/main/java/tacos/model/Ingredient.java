@@ -1,9 +1,11 @@
 package tacos.model;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 @Data
 public class Ingredient {
+  @Id
   private final String id;
   private final String name;
   private final Type type;

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import tacos.model.TacoOrder;
+import tacos.repositories.OrderRepository;
 
 @Slf4j
 @Controller
@@ -17,6 +18,10 @@ import tacos.model.TacoOrder;
 @RequestMapping("/orders")
 public class OrderController {
 
+  private OrderRepository orderRepo;
+  public OrderController(OrderRepository orderRepo) {
+    this.orderRepo = orderRepo;
+  }
   @GetMapping("/current")
   public String orderForm() {
     return "orderForm";
@@ -27,6 +32,7 @@ public class OrderController {
     if (errors.hasErrors()) {
       return "orderForm";
     }
+    orderRepo.save(order);
     log.info("Order submitted: {}", order);
     sessionStatus.setComplete();
     return "redirect:/";
