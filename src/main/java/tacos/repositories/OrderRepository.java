@@ -6,5 +6,4 @@ import tacos.model.TacoOrder;
 
 public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
 
-  List<TacoOrder> findByDeliveryZip(String deliveryZip);
 }

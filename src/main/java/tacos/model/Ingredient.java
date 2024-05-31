@@ -2,6 +2,7 @@ package tacos.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +11,8 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor(force = true)
-@RequiredArgsConstructor
+@NoArgsConstructor(access= AccessLevel.PRIVATE, force=true)
+//@RequiredArgsConstructor
 public class Ingredient {
 
   @Id
