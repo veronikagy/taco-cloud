@@ -17,6 +17,7 @@ import tacos.model.Ingredient;
 import tacos.model.Ingredient.Type;
 import tacos.model.Taco;
 import tacos.model.TacoOrder;
+import tacos.model.udt.TacoUDT;
 
 @Slf4j
 @Controller
@@ -66,8 +67,9 @@ public class DesignTacoController {
     if (errors.hasErrors()){
       return "design";
     }
-    tacoOrder.addTaco(taco);
-    log.info("Processing taco: {}", taco);
+
+    tacoOrder.addTaco(new TacoUDT(taco.getName(), taco.getIngredients()));
+
     return "redirect:/orders/current";
   }
 
