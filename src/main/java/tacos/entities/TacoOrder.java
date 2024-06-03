@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -18,6 +19,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 @Entity
+@Table(name = "orders")
 @Data
 public class TacoOrder implements Serializable {
 
