@@ -1,4 +1,4 @@
-package tacos.model;
+package tacos.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

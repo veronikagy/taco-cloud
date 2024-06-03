@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import tacos.model.Ingredient;
-import tacos.model.Ingredient.Type;
-import tacos.model.Taco;
-import tacos.model.TacoOrder;
+import tacos.entities.Ingredient;
+import tacos.entities.Ingredient.Type;
+import tacos.entities.Taco;
+import tacos.entities.TacoOrder;
 import tacos.repositories.IngredientRepository;
 
 @Slf4j

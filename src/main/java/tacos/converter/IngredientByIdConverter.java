@@ -3,7 +3,7 @@ package tacos.converter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import tacos.model.Ingredient;
+import tacos.entities.Ingredient;
 import tacos.repositories.IngredientRepository;
 
 @Component
