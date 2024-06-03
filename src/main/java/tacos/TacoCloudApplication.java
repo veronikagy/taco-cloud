@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import tacos.entities.Ingredient;
 import tacos.entities.Ingredient.Type;
 import tacos.repositories.IngredientRepository;
@@ -16,6 +17,7 @@ public class TacoCloudApplication {
   }
 
   @Bean
+  @Profile("!prod")
   public CommandLineRunner dataLoader(IngredientRepository repo) {
     return new CommandLineRunner() {
       @Override
