@@ -1,4 +1,4 @@
-package tacos.messaging;
+package tacos.messaging.jms;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import tacos.entities.TacoOrder;
+import tacos.messaging.OrderMessagingService;
 import tacos.repositories.OrderRepository;
 
 @RestController
